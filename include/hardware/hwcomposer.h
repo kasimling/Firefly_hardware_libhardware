@@ -172,7 +172,20 @@ typedef struct hwc_layer_1 {
              * top-left corner of the screen.
              */
             hwc_rect_t displayFrame;
-
+  
+    		char LayerName[LayerNameLength + 1];
+			int32_t bufferCount;
+            int32_t bufferUpdate;
+            int32_t bufferChange;
+            int32_t dospecialflag;
+            int32_t alreadyStereo;
+            int32_t displayStereo;
+            int32_t exLeft;
+            int32_t exRight;
+            int32_t exAddrOffset;
+			uint32_t realtransform;
+			uint32_t direct_fd;
+			uint32_t direct_addr;
             /* visible region in screen space. The origin is the
              * top-left corner of the screen.
              * The visible region INCLUDES areas overlapped by a translucent layer.
